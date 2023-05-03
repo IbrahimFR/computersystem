@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "changelogDate": "20230425000839",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "computer",
+  "fields": [
+    {
+      "fieldName": "macAddress",
+      "fieldType": "String",
+      "javadoc": "The macAddress attribute."
+    },
+    {
+      "fieldName": "ipAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employeeAbbreviation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "The Computer entity.",
+  "jpaMetamodelFiltering": false,
+  "name": "Computer",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

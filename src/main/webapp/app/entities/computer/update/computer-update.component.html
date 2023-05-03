@@ -1,0 +1,73 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-computer-heading" data-cy="ComputerCreateUpdateHeading">Create or edit a Computer</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" for="field_macAddress" ngbTooltip="The macAddress attribute.">Mac Address</label>
+          <input
+            type="text"
+            class="form-control"
+            name="macAddress"
+            id="field_macAddress"
+            data-cy="macAddress"
+            formControlName="macAddress"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" for="field_ipAddress">Ip Address</label>
+          <input type="text" class="form-control" name="ipAddress" id="field_ipAddress" data-cy="ipAddress" formControlName="ipAddress" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" for="field_employeeAbbreviation">Employee Abbreviation</label>
+          <input
+            type="text"
+            class="form-control"
+            name="employeeAbbreviation"
+            id="field_employeeAbbreviation"
+            data-cy="employeeAbbreviation"
+            formControlName="employeeAbbreviation"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" for="field_description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

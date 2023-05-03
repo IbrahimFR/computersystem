@@ -1,0 +1,22 @@
+
+
+/**
+ * The Computer entity.
+ */
+entity Computer {
+	/**
+	* The macAddress attribute.
+	*/
+	macAddress String,
+	ipAddress String,
+	employeeAbbreviation String,
+	description String,
+}
+
+// Set pagination options
+paginate Computer with infinite-scroll
+
+
+// Set service options to all except few
+service all with serviceImpl except Computer
+
