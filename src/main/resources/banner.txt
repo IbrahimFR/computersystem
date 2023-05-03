@@ -1,0 +1,2 @@
+${AnsiColor.BRIGHT_BLUE}::  🤓  :: Running Spring Boot ${spring-boot.version} ::
+:: https://www.jhipster.tech ::${AnsiColor.DEFAULT}
